@@ -1,0 +1,19 @@
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      feignName:
+        connectTimeout: 90000
+        readTimeout: 90000
+        
+server:
+  port: 8090    
+
+hystrix:
+  command:    
+    default:      
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 90000
